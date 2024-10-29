@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>КРЫСА ИЛИ КОТИК</h1>
+<h2>Узнайте, кем является ваш друг!</h2>
+<div class="pics">
+    <div class="pic">
+        <img src="/static/img/rat1.jpg">
+    </div>
+    <div class="pic">
+        <img src="/static/img/cat1.jpg">
+    </div>
+</div>
+<p>Введите имя и нажмите на кнопку</p>
+<div class="action">
+    <form action="." method="post">
+        {% csrf_token %}
+        {{form}}
+        <div class="but"><input type="submit" value="Узнать правду"></div>
+    </form>
+</div>
+
+{% endblock %}

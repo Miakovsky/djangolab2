@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background: rgb(88,39,66);
+            background: linear-gradient(0deg, rgba(88,39,66,1) 0%, rgba(179,73,147,1) 46%, rgba(238,192,252,1) 100%);
+            background-attachment: fixed;
+        }
+        .main {
+            display: grid;
+            grid-auto-flow: row;
+            align-items: center;
+            justify-items: center;
+            background-color: rgb(250, 214, 239);
+            width: 1000px;
+            margin: auto;
+            border: 3px solid;
+            border-radius: 5px;
+            border-color: rgb(255, 255, 255);
+            margin-top: 100px;
+            padding-bottom: 20px;
+        }
+        h1 {
+            font-family: "Lucida Console", "Courier New", monospace;
+            font-size: 300%;
+            color: rgb(72, 56, 85);
+        }
+        h2 {
+            font-family: "Lucida Console", "Courier New", monospace;
+            color: rgb(72, 56, 85);
+        }
+        .pics {
+            display: flex;
+            width: 1000px;
+            flex-shrink: 0;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            border: 1px solid;
+            border-radius: 5px;
+            border-color: rgb(255, 255, 255);
+            margin: 10px;
+            width: 300px; 
+            height: 300px; 
+            object-fit:cover;
+            flex-shrink: 0;
+        }
+        .action {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            margin: 10px;
+        }
+
+        input[type=text] {
+            width: 200px;
+            padding:10px 15px; 
+            margin:10px;
+            border:2px solid rgb(88, 39, 66); 
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+        }
+
+        input[type=text]:focus {
+            border-color:rgb(88, 39, 66);
+        }
+
+        input[type=submit] {
+            padding:20px; 
+            margin:10px;
+            background:#ffffff; 
+            border:1 none;
+            border-color:rgb(88, 39, 66);
+            cursor:pointer;
+            -webkit-border-radius: 5px;
+            border-radius: 5px; 
+            font-size: 150%;
+            color: rgb(72, 56, 85);
+            font-family: "Lucida Console", "Courier New", monospace;
+        }
+        p {
+            font-family: "Lucida Console", "Courier New", monospace;
+            color: rgb(72, 56, 85);
+            font-size: 150%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        {% block content %}
+        <h1>Блинн....</h1>
+        {% endblock %}
+
+    </div>
+</body>
+</html>
